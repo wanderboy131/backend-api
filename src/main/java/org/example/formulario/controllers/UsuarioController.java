@@ -1,7 +1,8 @@
 package org.example.formulario.controllers;
 import org.example.formulario.models.Usuario;
 import org.springframework.web.bind.annotation.*;
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://wanderboy131.github.io/front-api/",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
