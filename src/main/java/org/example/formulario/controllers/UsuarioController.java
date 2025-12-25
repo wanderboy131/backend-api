@@ -1,7 +1,7 @@
 package org.example.formulario.controllers;
 import org.example.formulario.models.Usuario;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
@@ -12,7 +12,8 @@ public class UsuarioController {
         return usuario;
     }
     @PostMapping("/crearUsuario")
-    public void crearUsuario(@RequestBody Usuario usuario){
+    public Usuario crearUsuario(@RequestBody Usuario usuario){
+        return usuario;
     }
     @PutMapping("/editarUsuario/{id}")
     public void editarUsuario(   @PathVariable int id , @RequestBody Usuario usuario) {
